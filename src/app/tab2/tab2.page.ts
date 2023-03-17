@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Preferences } from '@capacitor/preferences';
 import { PhotoService } from '../services/photo.service';
 
 @Component({
@@ -14,7 +13,7 @@ export class Tab2Page {
   ) {}
 
   async ngOnInit() {
-    await this.photoService.loadSaved();
+    await this.photoService.loadSavedPhotos();
   }
 
   addPhoto(): void {
